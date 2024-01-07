@@ -1,16 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
   <title>Lista de Personas</title>
-  <link rel="stylesheet" href="{% static "css/person_list.css" %}%}">
+  <link rel="stylesheet" href="{% static "css/person_list.css" %}">
 </head>
 <body>
-    <h1>Lista de Personas</h1>
+    <h1 class="title_info">Lista de Personas</h1>
     <ul>
         {% for person in people %}
             <li>{{ person.name }} {{ person.last_name }} - Edad: {{ person.age }}</li>
         {% endfor %}
     </ul>
-    <img src="{% static 'img/title.jpg' %}" alt="Persona en el espacio">
+    <img src="{% static 'img/title.jpg' %}" width="500" height="250" alt="Persona en el espacio">
 </body>
 </html>
